@@ -1,0 +1,99 @@
+# ================================
+# Firebase
+# ================================
+.firebase/
+.firebaserc.local
+
+# ================================
+# Node / npm (if any tooling used)
+# ================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# ================================
+# OS Files
+# ================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V8
+.Trashes
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+
+# ================================
+# Editor / IDE
+# ================================
+
+# VS Code
+.vscode/
+!.vscode/extensions.json
+
+# JetBrains
+.idea/
+*.iml
+*.iws
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+
+# Emacs
+*~
+\#*\#
+.#*
+
+# ================================
+# Environment & Secrets
+# ================================
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.pem
+secrets.js
+config.local.js
+
+# ================================
+# Logs & Temp
+# ================================
+*.log
+logs/
+tmp/
+temp/
+.tmp/
+*.tmp
+
+# ================================
+# Build outputs (if any)
+# ================================
+dist/
+build/
+out/
+
+# ================================
+# Misc
+# ================================
+vsfs.txt
+*.bak
+*.orig

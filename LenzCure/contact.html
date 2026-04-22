@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - Lenzcure</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700&family=Sora:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/contact.css" />
+    <link rel="stylesheet" href="styles/nav.css" />
+    <link rel="stylesheet" href="styles/responsive-fixes.css" />
+  </head>
+  <body class="contact-page">
+    <div id="site-nav-root"></div>
+
+    <main>
+      <section class="section contact-hero reveal">
+        <div class="container contact-hero-banner">
+          <div class="contact-hero-copy">
+            <p class="crumb"><a href="index.html">Home</a> / Contact Us</p>
+            <h1>Get in Touch</h1>
+            <p class="lead">
+              For product inquiries, export requirements, or partnership discussions, connect with our
+              team. We will review your request and respond with the relevant information and next steps.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section contact-main reveal-up">
+        <div class="container contact-grid-main">
+          <form class="contact-panel">
+            <div class="row">
+              <label>Full Name<input type="text" placeholder="Enter full name" required /></label>
+              <label>Email<input type="email" placeholder="Enter email" required /></label>
+            </div>
+            <div class="row">
+              <label>Phone Number<input type="tel" placeholder="Enter phone number" required /></label>
+              <label>Company Name<input type="text" placeholder="Enter company name" required /></label>
+            </div>
+            <label>Subject<input type="text" placeholder="Enter subject" required /></label>
+            <label>Message<textarea rows="6" placeholder="Enter your message" required></textarea></label>
+            <button type="submit" class="btn">Submit</button>
+          </form>
+
+          <aside class="contact-info">
+            <div>
+              <h3>Phone no.</h3>
+              <p class="primary">+91-9316220263</p>
+            </div>
+            <div>
+              <h3>Email</h3>
+              <p class="primary">Info@lenzcure.com</p>
+            </div>
+            <div>
+              <h3>Our Location</h3>
+              <p class="primary">312- rajkamal arcade, GIDC, ANKLESHWAR-393001- Bharuch gujarat</p>
+              <img src="assets/about us map.png" alt="Lenzcure office location map" />
+            </div>
+            <div class="contact-social-wrap">
+              <h3>Social Network</h3>
+              <div class="social-links">
+                <a href="#" aria-label="LinkedIn"><img src="assets/icon-linkedin-primary.svg" alt="LinkedIn" /></a>
+                <a href="#" aria-label="Instagram"><img src="assets/icon-instagram-primary.svg" alt="Instagram" /></a>
+                <a href="#" aria-label="Facebook"><img src="assets/icon-facebook-primary.svg" alt="Facebook" /></a>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <div id="site-footer-root"></div>
+
+    <script src="scripts/layout-loader.js"></script>
+    <script src="scripts/main.js"></script>
+    <script type="module" src="scripts/firebase-config.js"></script>
+  </body>
+</html>

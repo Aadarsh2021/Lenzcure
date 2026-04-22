@@ -1,0 +1,264 @@
+.career-page {
+  font-family: "Manrope", sans-serif;
+}
+
+.career-page h1,
+.career-page h2,
+.career-page h3 {
+  font-family: "Sora", sans-serif;
+  color: #1a1a1a;
+  margin: 0;
+  font-weight: 400;
+}
+
+.career-page .container {
+  width: min(1528px, calc(100% - 32px));
+  margin: 0 auto;
+}
+
+.career-page .section {
+  padding: 120px 0;
+}
+
+@media (max-width: 1024px) {
+  .career-page .section {
+    padding: 64px 0;
+  }
+}
+
+@media (max-width: 580px) {
+  .career-page .section {
+    padding: 48px 0;
+  }
+}
+
+.career-hero {
+  padding-top: 40px !important;
+}
+
+.career-hero-banner {
+  min-height: clamp(400px, 60vh, 600px);
+  border-radius: 40px;
+  background: linear-gradient(270deg, rgba(91, 192, 235, 0) 10.07%, #5bc0eb 100%),
+    url("../assets/career hero.png") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+}
+
+.career-hero-copy {
+  padding: 0 5vw;
+  max-width: 879px;
+}
+
+@media (max-width: 768px) {
+  .career-hero-copy {
+    padding: 0 24px;
+    text-align: center;
+  }
+}
+
+.career-hero-copy h1 {
+  font-size: clamp(44px, 6vw, 90px);
+  line-height: 1.33;
+}
+
+.career-page .lead,
+.career-page p {
+  color: #626262;
+  font-size: 20px;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+.tag-box-blue {
+  display: inline-flex;
+  padding: 10px 20px;
+  background: #D9E5FD;
+  border-radius: 50px;
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #1a1a1a;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.narrative-grid {
+  max-width: 1528px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.narrative-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.narrative-content h2 {
+  font-size: clamp(44px, 5vw, 70px);
+  line-height: 1.1;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.narrative-content p {
+  color: #626262;
+  font-size: 18px;
+  line-height: 1.6;
+  font-weight: 500;
+  margin: 0;
+}
+
+.narrative-image img {
+  width: 100%;
+  border-radius: 40px;
+  object-fit: cover;
+}
+
+.openings-block {
+  margin-top: 100px;
+}
+
+.openings-top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: flex-end;
+  margin-bottom: 40px;
+}
+
+.openings-title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.section-divider {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #e5e5e5;
+  margin: 80px 0;
+}
+
+.opening-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+
+.opening-card {
+  text-decoration: none;
+  background: #f6f6f6;
+  border-radius: 20px;
+  padding: 30px 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  border: 1px solid transparent;
+  transition: border-color 0.3s ease;
+  cursor: pointer;
+}
+
+.opening-card:hover {
+  border: 1px solid #1d4ed8;
+}
+
+.opening-card h3 {
+  font-family: "Sora", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+  color: #000000;
+}
+
+.opening-card p {
+  margin-top: 0;
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #1a1a1a;
+}
+
+@media (max-width: 768px) {
+  .career-page .container {
+    width: min(1528px, calc(100% - 1.5rem));
+  }
+
+  .career-page .section {
+    padding: 40px 0;
+  }
+
+  .career-hero-banner {
+    min-height: 380px;
+    border-radius: 24px;
+  }
+
+  .career-hero-copy {
+    padding: 0 22px;
+  }
+
+  .career-page p,
+  .career-page .lead {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .career-hero-copy,
+  .career-page .openings-header {
+    text-align: center;
+  }
+
+  .career-page .openings-header {
+    align-items: center;
+  }
+
+  .opening-card {
+    padding: 20px;
+    border-radius: 18px;
+  }
+
+  .opening-card h3 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .career-page .container {
+    width: min(1528px, calc(100% - 16px));
+  }
+
+  .career-hero-banner {
+    min-height: 300px;
+    border-radius: 20px;
+  }
+
+  .career-hero-copy h1 {
+    font-size: 34px;
+    line-height: 1.15;
+  }
+
+  .opening-card {
+    padding: 18px 16px;
+  }
+}
+
+@media (max-width: 820px) {
+
+  .career-page .container,
+  .opening-card {
+    min-width: 0;
+  }
+}
