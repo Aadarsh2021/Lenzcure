@@ -4,6 +4,9 @@
 .firebase/
 .firebaserc.local
 
+# Real Firebase config (contains API key — use firebase-config.example.js as template)
+scripts/firebase-config.js
+
 # ================================
 # Node / npm (if any tooling used)
 # ================================
