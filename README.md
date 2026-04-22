@@ -4,7 +4,7 @@
 
 LenzCure is a modern, fully responsive pharmaceutical company website built with vanilla HTML, CSS, and JavaScript. It showcases LenzCure's pharmaceutical product portfolio, global reach, career opportunities, and company information with a clean, professional design.
 
-🌐 **Live Site:** [https://lenzcure-17d63.web.app](https://lenzcure-17d63.web.app)
+🌐 **Live Site:** [https://www.lenzcure.com](https://www.lenzcure.com)
 
 ---
 
