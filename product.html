@@ -1,430 +1,450 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Products - Lenzcure</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700&family=Sora:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles/main.css" />
-    <link rel="stylesheet" href="styles/product.css" />
-    <link rel="stylesheet" href="styles/nav.css" />
-    <link rel="stylesheet" href="styles/responsive-fixes.css" />
-  </head>
-  <body class="product-page">
-<!-- Header -->
-    <header class="site-header">
-      <div class="nav-wrap">
-        <a class="logo" href="index.html"><img src="assets/logo.svg" alt="Lenzcure logo" /></a>
-        <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-        <nav class="site-nav" data-nav>
-          <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="product.html">Products</a>
-            <a href="about.html">About Us</a>
-            <a href="career.html">Career</a>
-          </div>
-          <div class="nav-cta">
-            <a class="btn btn-sm btn-light" href="contact.html">Become a Distributor</a>
-            <a class="btn btn-sm" href="contact.html">Contact us</a>
-          </div>
-        </nav>
-      </div>
-    </header>
-    <main>
-      <section class="section product-hero reveal">
-        <div class="container product-hero-banner">
-          <div class="product-hero-copy">
-            <p class="crumb"><a href="index.html">Home</a> / Products</p>
-            <h1>Product Portfolio</h1>
-            <p class="lead">
-              LENZCURE offers a comprehensive range of pharmaceutical formulations developed through
-              certified manufacturing processes, ensuring consistent quality, regulatory compliance, and
-              reliable supply across global and domestic markets.
-            </p>
-          </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Products - Lenzcure</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700&family=Sora:wght@400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles/main.css" />
+  <link rel="stylesheet" href="styles/product.css" />
+  <link rel="stylesheet" href="styles/nav.css" />
+  <link rel="stylesheet" href="styles/responsive-fixes.css" />
+</head>
+
+<body class="product-page">
+  <!-- Header -->
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="logo" href="index.html"><img src="assets/logo.svg" alt="Lenzcure logo" /></a>
+      <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav" data-nav>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="product.html">Products</a>
+          <a href="about.html">About Us</a>
+          <a href="career.html">Career</a>
         </div>
-      </section>
-
-      <section class="section product-segments reveal-up">
-        <div class="container">
-          <div class="product-main">
-            <div class="segment-accordion">
-              <!-- Cardiac & Diabetic Care -->
-              <article class="segment expanded" id="cardiac-diabetic">
-                <div class="segment-header">
-                  <h3 class="segment-title">Cardiac & Diabetic Care</h3>
-                  <button class="segment-toggle-btn" aria-expanded="true"></button>
-                </div>
-                <div class="segment-body">
-                  <div class="segment-grid">
-                    <div class="segment-col-info">
-                      <h4 class="expanded-title">Cardiac & Diabetic Care</h4>
-                      <p class="segment-description">
-                        This segment includes formulations focused on the management of cardiovascular and metabolic disorders such as hypertension, heart disease, and diabetes. Products are designed for long-term treatment, helping maintain stability, regulate key health parameters, and support overall patient management.
-                      </p>
-                    </div>
-                    <div class="segment-col-image">
-                      <img src="assets/segment-cardiac-diabetic-care.png" alt="Cardiac & Diabetic Care">
-                    </div>
-                    <div class="segment-col-features">
-                      <ul class="feature-list">
-                        <li>Unlimited queued requests</li>
-                        <li>Always-on creative pipeline</li>
-                        <li>Brand-safe execution with quality checks</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </article>
-
-              <!-- Orthopedic -->
-              <article class="segment" id="orthopedic">
-                <div class="segment-header">
-                  <h3 class="segment-title">Orthopedic</h3>
-                  <button class="segment-toggle-btn" aria-expanded="false"></button>
-                </div>
-                <div class="segment-body">
-                  <div class="segment-grid">
-                    <div class="segment-col-info">
-                      <h4 class="expanded-title">Orthopedic</h4>
-                      <p class="segment-description">
-                        Covers formulations related to bone, joint, and musculoskeletal conditions. This includes treatments for pain management, inflammation, arthritis, and recovery support, aimed at improving mobility and physical function.
-                      </p>
-                    </div>
-                    <div class="segment-col-image">
-                      <img src="assets/segment-orthopedic.png" alt="Orthopedic">
-                    </div>
-                    <div class="segment-col-features">
-                      <ul class="feature-list">
-                        <li>Unlimited queued requests</li>
-                        <li>Always-on creative pipeline</li>
-                        <li>Brand-safe execution with quality checks</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </article>
-
-              <!-- Neurology & CNS -->
-              <article class="segment" id="neurology-cns">
-                <div class="segment-header">
-                  <h3 class="segment-title">Neurology & CNS</h3>
-                  <button class="segment-toggle-btn" aria-expanded="false"></button>
-                </div>
-                <div class="segment-body">
-                  <div class="segment-grid">
-                    <div class="segment-col-info">
-                      <h4 class="expanded-title">Neurology & CNS</h4>
-                      <p class="segment-description">
-                        Focused on conditions affecting the central nervous system, including neurological and psychiatric disorders. Formulations are developed to support cognitive function, neurological balance, and long-term management of CNS-related conditions.
-                      </p>
-                    </div>
-                    <div class="segment-col-image">
-                      <img src="assets/segment-neurology-cns.png" alt="Neurology & CNS">
-                    </div>
-                    <div class="segment-col-features">
-                      <ul class="feature-list">
-                        <li>Unlimited queued requests</li>
-                        <li>Always-on creative pipeline</li>
-                        <li>Brand-safe execution with quality checks</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </article>
-
-              <!-- Anti-Infectives -->
-              <article class="segment" id="anti-infectives">
-                <div class="segment-header">
-                  <h3 class="segment-title">Anti-Infectives</h3>
-                  <button class="segment-toggle-btn" aria-expanded="false"></button>
-                </div>
-                <div class="segment-body">
-                  <div class="segment-grid">
-                    <div class="segment-col-info">
-                      <h4 class="expanded-title">Anti-Infectives</h4>
-                      <p class="segment-description">
-                        Includes a wide range of formulations used in the treatment of bacterial and infectious diseases. These products are developed to provide effective response to infections while maintaining safety and consistency in treatment outcomes.
-                      </p>
-                    </div>
-                    <div class="segment-col-image">
-                      <img src="assets/segment-anti-infectives.png" alt="Anti-Infectives">
-                    </div>
-                    <div class="segment-col-features">
-                      <ul class="feature-list">
-                        <li>Unlimited queued requests</li>
-                        <li>Always-on creative pipeline</li>
-                        <li>Brand-safe execution with quality checks</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </article>
-
-              <!-- Respiratory Care -->
-              <article class="segment" id="respiratory-care">
-                <div class="segment-header">
-                  <h3 class="segment-title">Respiratory Care</h3>
-                  <button class="segment-toggle-btn" aria-expanded="false"></button>
-                </div>
-                <div class="segment-body">
-                  <div class="segment-grid">
-                    <div class="segment-col-info">
-                      <h4 class="expanded-title">Respiratory Care</h4>
-                      <p class="segment-description">
-                        Covers formulations designed to manage respiratory conditions such as asthma, allergies, and airway-related disorders. These products support improved breathing, airway control, and long-term respiratory health.
-                      </p>
-                    </div>
-                    <div class="segment-col-image">
-                      <img src="assets/segment-respiratory-care.png" alt="Respiratory Care">
-                    </div>
-                    <div class="segment-col-features">
-                      <ul class="feature-list">
-                        <li>Unlimited queued requests</li>
-                        <li>Always-on creative pipeline</li>
-                        <li>Brand-safe execution with quality checks</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </article>
-
-              <!-- Dermatology -->
-              <article class="segment" id="dermatology">
-                <div class="segment-header">
-                  <h3 class="segment-title">Dermatology</h3>
-                  <button class="segment-toggle-btn" aria-expanded="false"></button>
-                </div>
-                <div class="segment-body">
-                  <div class="segment-grid">
-                    <div class="segment-col-info">
-                      <h4 class="expanded-title">Dermatology</h4>
-                      <p class="segment-description">
-                        Focused on skin health, this segment includes treatments for infections, inflammation, and chronic dermatological conditions. Formulations are designed for both therapeutic and maintenance-based skin care.
-                      </p>
-                    </div>
-                    <div class="segment-col-image">
-                      <img src="assets/segment-dermatology.png" alt="Dermatology">
-                    </div>
-                    <div class="segment-col-features">
-                      <ul class="feature-list">
-                        <li>Unlimited queued requests</li>
-                        <li>Always-on creative pipeline</li>
-                        <li>Brand-safe execution with quality checks</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </article>
-
-              <!-- Pediatric -->
-              <article class="segment" id="pediatric">
-                <div class="segment-header">
-                  <h3 class="segment-title">Pediatric</h3>
-                  <button class="segment-toggle-btn" aria-expanded="false"></button>
-                </div>
-                <div class="segment-body">
-                  <div class="segment-grid">
-                    <div class="segment-col-info">
-                      <h4 class="expanded-title">Pediatric</h4>
-                      <p class="segment-description">
-                        Includes formulations specifically designed for children, with attention to safety, dosage accuracy, and ease of administration. This segment supports treatment across various pediatric health conditions.
-                      </p>
-                    </div>
-                    <div class="segment-col-image">
-                      <img src="assets/segment-pediatric.png" alt="Pediatric">
-                    </div>
-                    <div class="segment-col-features">
-                      <ul class="feature-list">
-                        <li>Unlimited queued requests</li>
-                        <li>Always-on creative pipeline</li>
-                        <li>Brand-safe execution with quality checks</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </article>
-
-              <!-- Gynecology -->
-              <article class="segment" id="gynecology">
-                <div class="segment-header">
-                  <h3 class="segment-title">Gynecology</h3>
-                  <button class="segment-toggle-btn" aria-expanded="false"></button>
-                </div>
-                <div class="segment-body">
-                  <div class="segment-grid">
-                    <div class="segment-col-info">
-                      <h4 class="expanded-title">Gynecology</h4>
-                      <p class="segment-description">
-                        Covers formulations related to women’s health, including hormonal balance, reproductive health, and related conditions. Products are developed to support both preventive and therapeutic care.
-                      </p>
-                    </div>
-                    <div class="segment-col-image">
-                      <img src="assets/segment-gynecology.png" alt="Gynecology">
-                    </div>
-                    <div class="segment-col-features">
-                      <ul class="feature-list">
-                        <li>Unlimited queued requests</li>
-                        <li>Always-on creative pipeline</li>
-                        <li>Brand-safe execution with quality checks</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </article>
-
-              <!-- Dental Care -->
-              <article class="segment" id="dental-care">
-                <div class="segment-header">
-                  <h3 class="segment-title">Dental Care</h3>
-                  <button class="segment-toggle-btn" aria-expanded="false"></button>
-                </div>
-                <div class="segment-body">
-                  <div class="segment-grid">
-                    <div class="segment-col-info">
-                      <h4 class="expanded-title">Dental Care</h4>
-                      <p class="segment-description">
-                        Focused on oral health, this segment includes formulations used in the treatment of dental infections, hygiene maintenance, and overall oral care.
-                      </p>
-                    </div>
-                    <div class="segment-col-image">
-                      <img src="assets/segment-dental-care.png" alt="Dental Care">
-                    </div>
-                    <div class="segment-col-features">
-                      <ul class="feature-list">
-                        <li>Unlimited queued requests</li>
-                        <li>Always-on creative pipeline</li>
-                        <li>Brand-safe execution with quality checks</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </article>
-
-              <!-- General Medicine -->
-              <article class="segment" id="general-medicine">
-                <div class="segment-header">
-                  <h3 class="segment-title">General Medicine</h3>
-                  <button class="segment-toggle-btn" aria-expanded="false"></button>
-                </div>
-                <div class="segment-body">
-                  <div class="segment-grid">
-                    <div class="segment-col-info">
-                      <h4 class="expanded-title">General Medicine</h4>
-                      <p class="segment-description">
-                        A broad category covering commonly used formulations for routine healthcare needs. This includes treatments for general conditions and everyday medical requirements.
-                      </p>
-                    </div>
-                    <div class="segment-col-image">
-                      <img src="assets/segment-general-medicine.png" alt="General Medicine">
-                    </div>
-                    <div class="segment-col-features">
-                      <ul class="feature-list">
-                        <li>Unlimited queued requests</li>
-                        <li>Always-on creative pipeline</li>
-                        <li>Brand-safe execution with quality checks</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </article>
-
-              <!-- Nutraceuticals & Supplements -->
-              <article class="segment" id="nutraceuticals-supplements">
-                <div class="segment-header">
-                  <h3 class="segment-title">Nutraceuticals & Supplements</h3>
-                  <button class="segment-toggle-btn" aria-expanded="false"></button>
-                </div>
-                <div class="segment-body">
-                  <div class="segment-grid">
-                    <div class="segment-col-info">
-                      <h4 class="expanded-title">Nutraceuticals & Supplements</h4>
-                      <p class="segment-description">
-                        Includes nutritional formulations designed to support preventive healthcare, immunity, and overall wellness. These products complement medical treatments and promote long-term health.
-                      </p>
-                    </div>
-                    <div class="segment-col-image">
-                      <img src="assets/segment-nutraceuticals-supplements.png" alt="Nutraceuticals & Supplements">
-                    </div>
-                    <div class="segment-col-features">
-                      <ul class="feature-list">
-                        <li>Unlimited queued requests</li>
-                        <li>Always-on creative pipeline</li>
-                        <li>Brand-safe execution with quality checks</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </article>
-            </div>
-          </div>
+        <div class="nav-cta">
+          <a class="btn btn-sm btn-light" href="contact.html">Become a Distributor</a>
+          <a class="btn btn-sm" href="contact.html">Contact us</a>
         </div>
-      </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="site-footer mega-footer">
-      <div class="container footer-top">
-        <div class="footer-brand">
-          <a href="index.html" class="footer-logo">
-            <img src="assets/logo.svg" alt="LenzCure Logo" />
-          </a>
-          <p>
-            LENZCURE is a pharmaceutical manufacturing and supply company focused on delivering quality
-            formulations through certified processes and reliable distribution across global markets.
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="section product-hero reveal">
+      <div class="container product-hero-banner">
+        <div class="product-hero-copy">
+          <h1>Product Portfolio</h1>
+          <p class="lead">
+            LENZCURE offers a comprehensive range of pharmaceutical formulations developed through
+            certified manufacturing processes, ensuring consistent quality, regulatory compliance, and
+            reliable supply across global and domestic markets.
           </p>
         </div>
-        <div class="footer-links-wrap">
-          <div class="footer-column">
-            <h4>Quick links</h4>
-            <div class="links">
-              <a href="index.html">Home</a>
-              <a href="product.html">Products</a>
-              <a href="about.html">About us</a>
-              <a href="career.html">Career</a>
-            </div>
-          </div>
-          <div class="footer-column">
-            <h4>Support</h4>
-            <div class="links">
-              <a href="index.html#faqs">FAQs</a>
-              <a href="contact.html">Contact us</a>
-              <a href="contact.html">Become a Distributor</a>
-            </div>
-          </div>
-          <div class="footer-column">
-            <h4>Legal</h4>
-            <div class="links">
-              <a href="#">Terms &amp; Conditions</a>
-              <a href="#">Privacy Policy</a>
-            </div>
+      </div>
+    </section>
+
+    <section class="section product-segments reveal-up">
+      <div class="container">
+        <div class="product-main">
+          <div class="segment-accordion">
+            <!-- Cardiac & Diabetic Care -->
+            <article class="segment expanded" id="cardiac-diabetic">
+              <div class="segment-header">
+                <h3 class="segment-title">Cardiac & Diabetic Care</h3>
+                <button class="segment-toggle-btn" aria-expanded="true"></button>
+              </div>
+              <div class="segment-body">
+                <div class="segment-grid">
+                  <div class="segment-col-info">
+                    <h4 class="expanded-title">Cardiac & Diabetic Care</h4>
+                    <p class="segment-description">
+                      This segment includes formulations focused on the management of cardiovascular and metabolic
+                      disorders such as hypertension, heart disease, and diabetes. Products are designed for long-term
+                      treatment, helping maintain stability, regulate key health parameters, and support overall patient
+                      management.
+                    </p>
+                  </div>
+                  <div class="segment-col-image">
+                    <img src="assets/segment-cardiac-diabetic-care.png" alt="Cardiac & Diabetic Care">
+                  </div>
+                  <div class="segment-col-features">
+                    <ul class="feature-list">
+                      <li>Unlimited queued requests</li>
+                      <li>Always-on creative pipeline</li>
+                      <li>Brand-safe execution with quality checks</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Orthopedic -->
+            <article class="segment" id="orthopedic">
+              <div class="segment-header">
+                <h3 class="segment-title">Orthopedic</h3>
+                <button class="segment-toggle-btn" aria-expanded="false"></button>
+              </div>
+              <div class="segment-body">
+                <div class="segment-grid">
+                  <div class="segment-col-info">
+                    <h4 class="expanded-title">Orthopedic</h4>
+                    <p class="segment-description">
+                      Covers formulations related to bone, joint, and musculoskeletal conditions. This includes
+                      treatments for pain management, inflammation, arthritis, and recovery support, aimed at improving
+                      mobility and physical function.
+                    </p>
+                  </div>
+                  <div class="segment-col-image">
+                    <img src="assets/segment-orthopedic.png" alt="Orthopedic">
+                  </div>
+                  <div class="segment-col-features">
+                    <ul class="feature-list">
+                      <li>Unlimited queued requests</li>
+                      <li>Always-on creative pipeline</li>
+                      <li>Brand-safe execution with quality checks</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Neurology & CNS -->
+            <article class="segment" id="neurology-cns">
+              <div class="segment-header">
+                <h3 class="segment-title">Neurology & CNS</h3>
+                <button class="segment-toggle-btn" aria-expanded="false"></button>
+              </div>
+              <div class="segment-body">
+                <div class="segment-grid">
+                  <div class="segment-col-info">
+                    <h4 class="expanded-title">Neurology & CNS</h4>
+                    <p class="segment-description">
+                      Focused on conditions affecting the central nervous system, including neurological and psychiatric
+                      disorders. Formulations are developed to support cognitive function, neurological balance, and
+                      long-term management of CNS-related conditions.
+                    </p>
+                  </div>
+                  <div class="segment-col-image">
+                    <img src="assets/segment-neurology-cns.png" alt="Neurology & CNS">
+                  </div>
+                  <div class="segment-col-features">
+                    <ul class="feature-list">
+                      <li>Unlimited queued requests</li>
+                      <li>Always-on creative pipeline</li>
+                      <li>Brand-safe execution with quality checks</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Anti-Infectives -->
+            <article class="segment" id="anti-infectives">
+              <div class="segment-header">
+                <h3 class="segment-title">Anti-Infectives</h3>
+                <button class="segment-toggle-btn" aria-expanded="false"></button>
+              </div>
+              <div class="segment-body">
+                <div class="segment-grid">
+                  <div class="segment-col-info">
+                    <h4 class="expanded-title">Anti-Infectives</h4>
+                    <p class="segment-description">
+                      Includes a wide range of formulations used in the treatment of bacterial and infectious diseases.
+                      These products are developed to provide effective response to infections while maintaining safety
+                      and consistency in treatment outcomes.
+                    </p>
+                  </div>
+                  <div class="segment-col-image">
+                    <img src="assets/segment-anti-infectives.png" alt="Anti-Infectives">
+                  </div>
+                  <div class="segment-col-features">
+                    <ul class="feature-list">
+                      <li>Unlimited queued requests</li>
+                      <li>Always-on creative pipeline</li>
+                      <li>Brand-safe execution with quality checks</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Respiratory Care -->
+            <article class="segment" id="respiratory-care">
+              <div class="segment-header">
+                <h3 class="segment-title">Respiratory Care</h3>
+                <button class="segment-toggle-btn" aria-expanded="false"></button>
+              </div>
+              <div class="segment-body">
+                <div class="segment-grid">
+                  <div class="segment-col-info">
+                    <h4 class="expanded-title">Respiratory Care</h4>
+                    <p class="segment-description">
+                      Covers formulations designed to manage respiratory conditions such as asthma, allergies, and
+                      airway-related disorders. These products support improved breathing, airway control, and long-term
+                      respiratory health.
+                    </p>
+                  </div>
+                  <div class="segment-col-image">
+                    <img src="assets/segment-respiratory-care.png" alt="Respiratory Care">
+                  </div>
+                  <div class="segment-col-features">
+                    <ul class="feature-list">
+                      <li>Unlimited queued requests</li>
+                      <li>Always-on creative pipeline</li>
+                      <li>Brand-safe execution with quality checks</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Dermatology -->
+            <article class="segment" id="dermatology">
+              <div class="segment-header">
+                <h3 class="segment-title">Dermatology</h3>
+                <button class="segment-toggle-btn" aria-expanded="false"></button>
+              </div>
+              <div class="segment-body">
+                <div class="segment-grid">
+                  <div class="segment-col-info">
+                    <h4 class="expanded-title">Dermatology</h4>
+                    <p class="segment-description">
+                      Focused on skin health, this segment includes treatments for infections, inflammation, and chronic
+                      dermatological conditions. Formulations are designed for both therapeutic and maintenance-based
+                      skin care.
+                    </p>
+                  </div>
+                  <div class="segment-col-image">
+                    <img src="assets/segment-dermatology.png" alt="Dermatology">
+                  </div>
+                  <div class="segment-col-features">
+                    <ul class="feature-list">
+                      <li>Unlimited queued requests</li>
+                      <li>Always-on creative pipeline</li>
+                      <li>Brand-safe execution with quality checks</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Pediatric -->
+            <article class="segment" id="pediatric">
+              <div class="segment-header">
+                <h3 class="segment-title">Pediatric</h3>
+                <button class="segment-toggle-btn" aria-expanded="false"></button>
+              </div>
+              <div class="segment-body">
+                <div class="segment-grid">
+                  <div class="segment-col-info">
+                    <h4 class="expanded-title">Pediatric</h4>
+                    <p class="segment-description">
+                      Includes formulations specifically designed for children, with attention to safety, dosage
+                      accuracy, and ease of administration. This segment supports treatment across various pediatric
+                      health conditions.
+                    </p>
+                  </div>
+                  <div class="segment-col-image">
+                    <img src="assets/segment-pediatric.png" alt="Pediatric">
+                  </div>
+                  <div class="segment-col-features">
+                    <ul class="feature-list">
+                      <li>Unlimited queued requests</li>
+                      <li>Always-on creative pipeline</li>
+                      <li>Brand-safe execution with quality checks</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Gynecology -->
+            <article class="segment" id="gynecology">
+              <div class="segment-header">
+                <h3 class="segment-title">Gynecology</h3>
+                <button class="segment-toggle-btn" aria-expanded="false"></button>
+              </div>
+              <div class="segment-body">
+                <div class="segment-grid">
+                  <div class="segment-col-info">
+                    <h4 class="expanded-title">Gynecology</h4>
+                    <p class="segment-description">
+                      Covers formulations related to women’s health, including hormonal balance, reproductive health,
+                      and related conditions. Products are developed to support both preventive and therapeutic care.
+                    </p>
+                  </div>
+                  <div class="segment-col-image">
+                    <img src="assets/segment-gynecology.png" alt="Gynecology">
+                  </div>
+                  <div class="segment-col-features">
+                    <ul class="feature-list">
+                      <li>Unlimited queued requests</li>
+                      <li>Always-on creative pipeline</li>
+                      <li>Brand-safe execution with quality checks</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Dental Care -->
+            <article class="segment" id="dental-care">
+              <div class="segment-header">
+                <h3 class="segment-title">Dental Care</h3>
+                <button class="segment-toggle-btn" aria-expanded="false"></button>
+              </div>
+              <div class="segment-body">
+                <div class="segment-grid">
+                  <div class="segment-col-info">
+                    <h4 class="expanded-title">Dental Care</h4>
+                    <p class="segment-description">
+                      Focused on oral health, this segment includes formulations used in the treatment of dental
+                      infections, hygiene maintenance, and overall oral care.
+                    </p>
+                  </div>
+                  <div class="segment-col-image">
+                    <img src="assets/segment-dental-care.png" alt="Dental Care">
+                  </div>
+                  <div class="segment-col-features">
+                    <ul class="feature-list">
+                      <li>Unlimited queued requests</li>
+                      <li>Always-on creative pipeline</li>
+                      <li>Brand-safe execution with quality checks</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- General Medicine -->
+            <article class="segment" id="general-medicine">
+              <div class="segment-header">
+                <h3 class="segment-title">General Medicine</h3>
+                <button class="segment-toggle-btn" aria-expanded="false"></button>
+              </div>
+              <div class="segment-body">
+                <div class="segment-grid">
+                  <div class="segment-col-info">
+                    <h4 class="expanded-title">General Medicine</h4>
+                    <p class="segment-description">
+                      A broad category covering commonly used formulations for routine healthcare needs. This includes
+                      treatments for general conditions and everyday medical requirements.
+                    </p>
+                  </div>
+                  <div class="segment-col-image">
+                    <img src="assets/segment-general-medicine.png" alt="General Medicine">
+                  </div>
+                  <div class="segment-col-features">
+                    <ul class="feature-list">
+                      <li>Unlimited queued requests</li>
+                      <li>Always-on creative pipeline</li>
+                      <li>Brand-safe execution with quality checks</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Nutraceuticals & Supplements -->
+            <article class="segment" id="nutraceuticals-supplements">
+              <div class="segment-header">
+                <h3 class="segment-title">Nutraceuticals & Supplements</h3>
+                <button class="segment-toggle-btn" aria-expanded="false"></button>
+              </div>
+              <div class="segment-body">
+                <div class="segment-grid">
+                  <div class="segment-col-info">
+                    <h4 class="expanded-title">Nutraceuticals & Supplements</h4>
+                    <p class="segment-description">
+                      Includes nutritional formulations designed to support preventive healthcare, immunity, and overall
+                      wellness. These products complement medical treatments and promote long-term health.
+                    </p>
+                  </div>
+                  <div class="segment-col-image">
+                    <img src="assets/segment-nutraceuticals-supplements.png" alt="Nutraceuticals & Supplements">
+                  </div>
+                  <div class="segment-col-features">
+                    <ul class="feature-list">
+                      <li>Unlimited queued requests</li>
+                      <li>Always-on creative pipeline</li>
+                      <li>Brand-safe execution with quality checks</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </article>
           </div>
         </div>
       </div>
-      <div class="footer-separator"></div>
-      <div class="container footer-bottom">
-        <p>&copy; 2026 All rights reserved.</p>
-        <div class="footer-social">
-          <a href="#" aria-label="LinkedIn" class="social-icon">
-            <img src="assets/icon-linkedin.svg" alt="LinkedIn" />
-          </a>
-          <a href="#" aria-label="Instagram" class="social-icon">
-            <img src="assets/icon-instagram.svg" alt="Instagram" />
-          </a>
-          <a href="#" aria-label="Facebook" class="social-icon">
-            <img src="assets/icon-facebook.svg" alt="Facebook" />
-          </a>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer mega-footer">
+    <div class="container footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo">
+          <img src="assets/logo.svg" alt="LenzCure Logo" />
+        </a>
+        <p>
+          LENZCURE is a pharmaceutical manufacturing and supply company focused on delivering quality
+          formulations through certified processes and reliable distribution across global markets.
+        </p>
+      </div>
+      <div class="footer-links-wrap">
+        <div class="footer-column">
+          <h4>Quick links</h4>
+          <div class="links">
+            <a href="index.html">Home</a>
+            <a href="product.html">Products</a>
+            <a href="about.html">About us</a>
+            <a href="career.html">Career</a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h4>Support</h4>
+          <div class="links">
+            <a href="index.html#faqs">FAQs</a>
+            <a href="contact.html">Contact us</a>
+            <a href="contact.html">Become a Distributor</a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h4>Legal</h4>
+          <div class="links">
+            <a href="#">Terms &amp; Conditions</a>
+            <a href="#">Privacy Policy</a>
+          </div>
         </div>
       </div>
-    </footer>
-    <script src="scripts/main.js"></script>
-    <script type="module" src="scripts/firebase-config.js"></script>
-  </body>
+    </div>
+    <div class="footer-separator"></div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 All rights reserved.</p>
+      <div class="footer-social">
+        <a href="#" aria-label="LinkedIn" class="social-icon">
+          <img src="assets/icon-linkedin.svg" alt="LinkedIn" />
+        </a>
+        <a href="#" aria-label="Instagram" class="social-icon">
+          <img src="assets/icon-instagram.svg" alt="Instagram" />
+        </a>
+        <a href="#" aria-label="Facebook" class="social-icon">
+          <img src="assets/icon-facebook.svg" alt="Facebook" />
+        </a>
+      </div>
+    </div>
+  </footer>
+  <script src="scripts/main.js"></script>
+  <script type="module" src="scripts/firebase-config.js"></script>
+</body>
+
 </html>

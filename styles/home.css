@@ -72,6 +72,7 @@
 
 .home-page .hero {
   padding: 20px 0 80px;
+  margin-top: 50px;
 }
 
 .home-page .container,
@@ -89,6 +90,7 @@
 
 .home-page .hero-title {
   flex: 0 1 50%;
+  margin-top: -20px;
 }
 
 .home-page .hero-title h1 {
@@ -275,10 +277,10 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: auto;
-  min-width: 160px;
+  width: 135px;
   height: 52px;
-  padding: 0 32px;
+  padding: 14px 24px;
+  gap: 10px;
   border: 2px solid #1D4ED8;
   border-radius: 60px;
   color: #1A1A1A;
@@ -380,15 +382,27 @@
 }
 
 .home-page .header-cta .btn-ghost {
-  width: 108px;
-  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 135px;
+  height: 52px;
+  padding: 14px 24px;
+  gap: 10px;
   border: 2px solid #1d4ed8;
   border-radius: 60px;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 20px;
   font-weight: 700;
-  padding: 14px 24px;
+  color: #1a1a1a;
+  background: transparent;
+  transition: all 0.3s ease;
   white-space: nowrap;
+}
+
+.home-page .header-cta .btn-ghost:hover {
+  background: #1d4ed8;
+  color: #ffffff;
 }
 
 .home-page .tag-box {
@@ -619,9 +633,10 @@
 
 .home-page .why-choose {
   margin: 0 auto;
-  max-width: min(1360px, calc(100% - 40px));
+  width: 100%;
+  max-width: 1528px;
   min-height: unset;
-  padding: 60px 30px;
+  padding: 80px 40px;
   background: linear-gradient(109.96deg, #D9E5FD 4.03%, #D5F6FF 98.83%);
   border-radius: 40px;
   position: relative;
@@ -658,12 +673,20 @@
 
 .home-page .why-grid {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: stretch;
   gap: 30px;
   width: 100%;
   max-width: 1528px;
-  height: auto;
+  height: 400px;
+  margin-top: 50px;
+}
+
+@media (max-width: 1200px) {
+  .home-page .why-grid {
+    flex-wrap: wrap;
+    height: auto;
+  }
 }
 
 .home-page .why-header {
@@ -702,19 +725,28 @@
 
 .home-page .why-card {
   width: 100%;
-  flex: 1 1 calc(25% - 23px);
+  flex: 1;
   min-width: 240px;
-  max-width: 320px;
-  min-height: 320px;
+  max-width: 100%;
+  height: 100%;
   border-radius: 20px;
-  padding: 30px 20px;
+  padding: 40px 30px;
   background: rgba(255, 255, 255, 0.45);
   backdrop-filter: blur(5px);
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: flex-start;
-  gap: 20px;
+  gap: 24px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.home-page .why-card:hover {
+  background: #ffffff;
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(29, 78, 216, 0.1);
+  border-color: rgba(29, 78, 216, 0.1);
 }
 
 .home-page .why-card .icon-box {
@@ -781,12 +813,14 @@
 }
 
 .home-page .global-reach .container {
-  display: grid;
-  gap: 30px;
-  max-width: 1320px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  width: 100%;
+  max-width: 1528px;
   background: linear-gradient(109.96deg, #f3f8ff 4.03%, #eefbff 98.83%);
   border-radius: 32px;
-  padding: 40px;
+  padding: 60px 40px;
 }
 
 .home-page .country-chips {
@@ -840,12 +874,110 @@
   margin: 0;
 }
 
+.home-page .global-map-container {
+  position: relative;
+  width: 100%;
+  max-width: 1528px;
+  height: 806.77px;
+  margin: 0 auto;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+@media (max-width: 1024px) {
+  .home-page .global-map-container {
+    height: 600px;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-page .global-map-container {
+    height: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-page .global-map-container {
+    height: 300px;
+  }
+}
+
 .home-page .global-map {
   width: 100%;
-  height: auto;
-  aspect-ratio: 16/9;
-  border-radius: 0;
-  object-fit: cover;
+  height: 100%;
+  object-fit: contain;
+}
+
+.home-page .map-markers {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.home-page .map-marker {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: #1d4ed8;
+  border: 3px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px rgba(29, 78, 216, 0.2);
+  z-index: 10;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.home-page .map-marker::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  background: #1d4ed8;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: marker-pulse 2s infinite;
+}
+
+@keyframes marker-pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.6;
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(3);
+    opacity: 0;
+  }
+}
+
+.home-page .marker-india {
+  top: 48%;
+  left: 68%;
+}
+
+.home-page .marker-uae {
+  top: 45%;
+  left: 59%;
+}
+
+.home-page .marker-kenya {
+  top: 58%;
+  left: 54%;
+}
+
+.home-page .marker-nigeria {
+  top: 55%;
+  left: 47%;
+}
+
+.home-page .marker-philippines {
+  top: 54%;
+  left: 81%;
 }
 
 @media (max-width: 768px) {
@@ -910,32 +1042,28 @@
 .home-page .faq-header {
   display: flex;
   flex-direction: row;
-  align-items: flex-end;
+  justify-content: space-between;
+  align-items: flex-start;
   gap: 30px;
   width: 100%;
-  min-height: 180px;
-  margin: 0 auto;
+  margin: 0 auto 50px;
   max-width: 100%;
 }
 
 .home-page .faq-title-block {
-  flex: 0 1 760px;
-  min-width: 0;
-  min-height: 180px;
+  flex: 0 1 700px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 15px;
+  gap: 20px;
 }
 
-.home-page .faq-header .tag-blue {
-  background: #b7c8f5;
-  border-radius: 50px;
-  padding: 10px 20px;
-  font-family: "Manrope", sans-serif;
-  font-weight: 600;
-  font-size: 14px;
-  color: #1a1a1a;
+.home-page .faqs .tag-box {
+  background: #E8EFFF;
+  color: #1d4ed8;
+  font-weight: 700;
+  padding: 8px 18px;
+  width: fit-content;
 }
 
 .home-page .faq-header h2 {
@@ -948,15 +1076,14 @@
 }
 
 .home-page .faq-header .lead {
-  flex: 0 1 530px;
-  min-width: 0;
+  flex: 0 1 450px;
   font-family: "Manrope", sans-serif;
   font-weight: 500;
   font-size: 18px;
-  line-height: 26px;
+  line-height: 1.5;
   color: #8a8a8a;
-  margin: 0;
-  padding-bottom: 12px;
+  margin-top: 60px;
+  padding-top: 48px;
 }
 
 .home-page .faq-split-content {
@@ -969,46 +1096,39 @@
 }
 
 .home-page .faq-visual {
-  flex: 1;
-  max-width: 530px;
-  height: 520px;
+  flex: 0 1 530px;
+  height: 600px;
+  width: 530px;
 }
 
 .home-page .faq-visual img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 20px;
+  border-radius: 40px;
 }
 
 .home-page .faq-list {
-  flex: 1.4;
+  flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  max-width: 879px;
-  height: 592px;
-  justify-content: space-between;
+  gap: 16px;
 }
 
 .home-page .faq-item {
-  box-sizing: border-box;
   width: 100%;
-  border: 1px solid #8a8a8a;
-  border-radius: 20px;
-  padding: 24px 24px 24px 36px;
-  background: transparent;
-  transition: all 0.25s ease;
+  border-radius: 32px;
+  padding: 32px 40px;
+  background: #F6F6F6;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   overflow: hidden;
-  height: 112px;
-  /* Closed state */
+  height: auto;
+  border: 1px solid transparent;
 }
 
 .home-page .faq-item.open {
   background: #ffffff;
-  border-color: transparent;
-  height: 196px;
-  min-height: 196px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
 }
 
 .home-page .faq-q-wrap {
@@ -1019,13 +1139,12 @@
 }
 
 .home-page .faq-item h3 {
-  font-family: "Sora", sans-serif;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 32px;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.4;
   color: #1a1a1a;
   margin: 0;
-  max-width: 727px;
 }
 
 .home-page .faq-toggle {
@@ -1046,13 +1165,12 @@
 }
 
 .home-page .faq-answer {
-  margin-top: 14px;
+  margin-top: 20px;
   font-family: "Manrope", sans-serif;
   font-weight: 400;
-  font-size: 20px;
-  line-height: 28px;
-  color: #8a8a8a;
-  max-width: 727px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #6a6a6a;
   display: none;
 }
 
@@ -1106,6 +1224,7 @@
   gap: 24px;
   min-height: unset;
   justify-self: center;
+  padding-left: 24px;
 }
 
 .home-page .contact-home-copy .eyebrow {
@@ -1130,6 +1249,18 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 16px 24px;
+  margin-top: 6px;
+}
+
+.home-page .eyebrow {
+  font-family: Manrope;
+  font-weight: 600;
+  font-style: SemiBold;
+  font-size: 14px;
+  leading-trim: NONE;
+  line-height: 20px;
+  letter-spacing: 0%;
+
 }
 
 .home-page .contact-meta-grid h3 {
@@ -1182,6 +1313,7 @@
   min-height: unset;
   align-content: start;
   justify-self: center;
+  margin-right: 50px;
 }
 
 
