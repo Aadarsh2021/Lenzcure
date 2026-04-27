@@ -1,0 +1,333 @@
+/* Navigation Wrapper */
+.site-header {
+  width: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 1000;
+  padding: clamp(12px, 2vw, 20px) var(--container-padding) 0;
+  box-sizing: border-box;
+}
+
+/* Container: Figma 1628px */
+.site-header .nav-wrap {
+  width: 100%;
+  max-width: 1628px;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  height: 52px;
+  gap: 0;
+}
+
+/* Logo Section */
+.logo {
+  display: flex;
+  align-items: center;
+  width: 180px;
+  height: 60px;
+  color: #1d4ed8;
+  font-family: "Manrope", sans-serif;
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 29px;
+  flex: none;
+}
+
+.logo img {
+  width: 180px;
+  height: 60px;
+  object-fit: contain;
+  display: block;
+}
+
+/* Navigation */
+.site-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0;
+  width: calc(100% - 180px);
+  height: 52px;
+  flex: none;
+  margin-left: auto;
+  flex-wrap: nowrap;
+}
+
+.site-nav .nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  gap: 20px;
+}
+
+.site-nav .nav-links > a {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 12px;
+  gap: 10px;
+  border-radius: 999px;
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  color: #8a8a8a;
+  white-space: nowrap;
+}
+
+.site-nav .nav-links > a[href="index.html"] {
+  width: auto;
+  min-width: 64px;
+  height: 40px;
+}
+
+.site-nav .nav-links > a[href="product.html"] {
+  width: auto;
+  min-width: 86px;
+  height: 40px;
+}
+
+.site-nav .nav-links > a[href="about.html"] {
+  width: auto;
+  min-width: 84px;
+  height: 40px;
+}
+
+.site-nav .nav-links > a[href="career.html"] {
+  width: auto;
+  min-width: 70px;
+  height: 40px;
+}
+
+.home-page .site-nav .nav-links > a[href="index.html"],
+.product-page .site-nav .nav-links > a[href="product.html"],
+.about-page .site-nav .nav-links > a[href="about.html"],
+.career-page .site-nav .nav-links > a[href="career.html"],
+.career-detail-page .site-nav .nav-links > a[href="career.html"],
+.contact-page .site-nav .nav-links > a[href="contact.html"] {
+  color: #1d4ed8;
+  font-weight: 700;
+}
+
+/* CTA Buttons */
+.site-nav .nav-cta {
+  display: flex;
+  align-items: center;
+  flex: none;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-left: 30px;
+}
+
+.site-nav .btn {
+  height: 52px;
+  min-height: 52px;
+  border-radius: 60px;
+  padding: 14px 24px;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  white-space: nowrap;
+}
+
+.site-nav .btn-light {
+  width: 211px;
+  background: #fff;
+  border-color: transparent;
+  color: #1a1a1a;
+  margin-left: 0;
+}
+
+.site-nav .btn:not(.btn-light) {
+  width: 134px;
+}
+
+/* Optional wrappers if added later */
+.site-nav ul {
+  display: flex;
+  list-style: none;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Mobile menu compatibility with scripts/main.js */
+.nav-toggle {
+  display: none;
+  border: 0;
+  background: transparent;
+  padding: 0;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  margin: 5px 0;
+  background: var(--primary);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: center;
+}
+
+.nav-toggle[aria-expanded="true"] span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.nav-toggle[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+  transform: translateX(-10px);
+}
+
+.nav-toggle[aria-expanded="true"] span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+@media (max-width: 1024px) {
+  .site-header .nav-wrap {
+    width: 100%;
+    padding: 0 24px;
+    gap: 10px;
+  }
+
+  .site-nav {
+    width: auto;
+    min-width: 0;
+    gap: 12px;
+    flex-wrap: nowrap;
+  }
+
+  .site-nav .nav-links {
+    flex: none;
+  }
+
+  .site-nav .nav-cta {
+    margin-left: 12px;
+  }
+
+  .site-nav .nav-links > a[href="index.html"],
+  .site-nav .nav-links > a[href="product.html"],
+  .site-nav .nav-links > a[href="about.html"],
+  .site-nav .nav-links > a[href="career.html"],
+  .site-nav .btn-light,
+  .site-nav .btn:not(.btn-light) {
+    width: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .site-header {
+    height: auto;
+    min-height: 64px;
+    padding: 8px 0 0;
+  }
+
+  .site-header .nav-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    height: auto;
+    min-height: 56px;
+    padding: 10px 12px;
+  }
+
+  .logo,
+  .logo img {
+    width: 132px;
+    height: 42px;
+  }
+
+  .nav-toggle {
+    display: inline-flex;
+    flex-direction: column;
+    margin-left: auto;
+    z-index: 1001;
+    cursor: pointer;
+  }
+
+  .site-nav {
+    position: fixed;
+    top: 64px;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: calc(100vh - 64px);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 24px;
+    background: #ffffff;
+    padding: 24px 20px 32px;
+    border-top: 1px solid var(--line);
+    z-index: 999;
+    overflow-y: auto;
+  }
+
+  .site-nav .nav-links,
+  .site-nav .nav-cta {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-left: 0;
+  }
+
+  .site-nav .nav-links > a {
+    padding: 15px 24px;
+    font-size: 18px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .site-nav .btn {
+    width: 100%;
+    max-width: 320px;
+    min-height: 48px;
+    height: auto;
+  }
+
+  .site-nav.is-open {
+    display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-header {
+    min-height: 60px;
+    padding-top: 6px;
+  }
+
+  .site-header .nav-wrap {
+    min-height: 54px;
+    padding: 8px 12px;
+  }
+
+  .logo,
+  .logo img {
+    width: 118px;
+    height: 38px;
+  }
+
+  .site-nav {
+    top: 60px;
+    height: calc(100vh - 60px);
+    padding-inline: 16px;
+  }
+
+  .site-nav .nav-links > a {
+    font-size: 16px;
+    padding: 13px 18px;
+  }
+}
