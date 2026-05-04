@@ -20,7 +20,10 @@
 }
 
 .contact-hero-banner {
-  min-height: clamp(400px, 60vh, 600px);
+  width: 1628;
+  height: 600px;
+  opacity: 1;
+  angle: 0 deg;
   border-radius: 40px;
   background: linear-gradient(270deg, rgba(91, 192, 235, 0) 10.07%, #5bc0eb 113.02%),
     url("../assets/contact us hero .png") center/cover no-repeat;

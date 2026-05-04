@@ -38,9 +38,10 @@
 }
 
 .career-hero-banner {
-  min-height: clamp(400px, 60vh, 600px);
+  width: 1628px;
+  height: 600px;
   border-radius: 40px;
-  background: linear-gradient(270deg, rgba(91, 192, 235, 0) 10.07%, #5bc0eb 100%),
+  background: linear-gradient(270deg, rgba(91, 192, 235, 0) 10.07%, #5bc0eb 113.02%),
     url("../assets/career hero.png") center/cover no-repeat;
   display: flex;
   align-items: center;

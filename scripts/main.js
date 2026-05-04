@@ -105,13 +105,17 @@ function initFaqs() {
   if (!faqItems.length) return;
 
   faqItems.forEach((item) => {
-    const question = item.querySelector("h3");
-    if (!question) return;
+    const toggle = item.querySelector(".faq-toggle");
+    if (!toggle) return;
 
-    question.addEventListener("click", () => {
+    toggle.addEventListener("click", (e) => {
+      e.stopPropagation();
       const isOpen = item.classList.contains("open");
-      // Close other FAQs if desired (optional)
-      // faqItems.forEach(faq => faq.classList.remove('open'));
+      
+      // Close other FAQs
+      faqItems.forEach(faq => faq.classList.remove('open'));
+      
+      // Toggle current
       item.classList.toggle("open", !isOpen);
     });
   });
