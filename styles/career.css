@@ -37,6 +37,13 @@
 
 }
 
+.btn:hover {
+  background-color: #0056b3 !important;
+  border-color: #0056b3 !important;
+  color: #ffffff !important;
+  cursor: pointer;
+}
+
 .career-hero-banner {
   width: 1628px;
   height: 600px;
@@ -158,10 +165,12 @@
 
 .section-divider {
   display: block;
-  width: 100%;
+  width: 70%;
   height: 1px;
   background-color: #e5e5e5;
   margin: 80px 0;
+  margin-left: 250px;
+  opacity: 70%;
 }
 
 .opening-list {
