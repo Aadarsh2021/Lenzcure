@@ -641,6 +641,34 @@
   border-radius: 40px;
   position: relative;
   overflow: hidden;
+  isolation: isolate;
+}
+
+.home-page .why-choose::before {
+  content: "";
+  position: absolute;
+
+  width: 1320px;
+  height: 1320px;
+
+  left: -560px;
+  top: -270px;
+
+  background-image: url("../assets/logo-symbol-bg.png");
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: 1320px auto;
+
+  opacity: 0.50;
+
+  z-index: 0;
+  pointer-events: none;
+}
+
+.home-page .why-header,
+.home-page .why-grid {
+  position: relative;
+  z-index: 2;
 }
 
 .home-page .why-choose .container {
@@ -650,20 +678,19 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
+  position: relative;
+  z-index: 1;
 }
 
-.home-page .why-choose::before {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 900px;
-  height: 900px;
-  left: -250px;
-  top: -150px;
-  background: url("../assets/logo-symbol.svg") no-repeat center / contain;
-  opacity: 0.12;
-  pointer-events: none;
-  transform: rotate(0deg);
+@media (max-width: 768px) {
+  .home-page .why-choose::before {
+    width: 760px;
+    height: 760px;
+    left: -220px;
+    top: -100px;
+    background-size: 720px auto;
+    opacity: 0.10;
+  }
 }
 
 .home-page .why-choose .tag-box {
