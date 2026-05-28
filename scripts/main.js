@@ -39,20 +39,20 @@ function initSegmentToggles() {
   segments.forEach((segment) => {
     const header = segment.querySelector(".segment-header");
     const toggleBtn = segment.querySelector(".segment-toggle-btn");
-    
+
     if (!header || !toggleBtn) return;
 
     header.addEventListener("click", (e) => {
       // If clicking the button itself, let the event bubble or handle here
       // Standard accordion behavior: Close others
       const isExpanded = segment.classList.contains("expanded");
-      
+
       if (!isExpanded) {
         segments.forEach(s => {
           s.classList.remove("expanded");
           s.querySelector(".segment-toggle-btn")?.setAttribute("aria-expanded", "false");
         });
-        
+
         segment.classList.add("expanded");
         toggleBtn.setAttribute("aria-expanded", "true");
         segment.scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -104,6 +104,7 @@ function initFaqs() {
   const faqItems = document.querySelectorAll(".faq-item");
   if (!faqItems.length) return;
 
+  // Add click listeners for toggling FAQ items
   faqItems.forEach((item) => {
     const toggle = item.querySelector(".faq-toggle");
     if (!toggle) return;
@@ -111,14 +112,21 @@ function initFaqs() {
     toggle.addEventListener("click", (e) => {
       e.stopPropagation();
       const isOpen = item.classList.contains("open");
-      
-      // Close other FAQs
-      faqItems.forEach(faq => faq.classList.remove('open'));
-      
-      // Toggle current
+
+      // Close all items
+      faqItems.forEach((faq) => faq.classList.remove("open"));
+      // Toggle current item
       item.classList.toggle("open", !isOpen);
     });
   });
+
+  // Open the first FAQ item by default
+  const firstItem = faqItems[0];
+  if (firstItem) {
+    const firstToggle = firstItem.querySelector(".faq-toggle");
+    firstItem.classList.add("open");
+    if (firstToggle) firstToggle.setAttribute("aria-expanded", "true");
+  }
 }
 
 function initProductSlider() {
@@ -186,6 +194,85 @@ function handleDeepLink() {
   }
 }
 
+function initAboutLogoSticky() {
+  const section = document.querySelector(".about-content");
+  const logo = document.querySelector(".about-image-block");
+  if (!section || !logo) return;
+
+  const desktopMq = window.matchMedia("(min-width: 1025px)");
+  let stickTop = 0;
+  let startScroll = 0;
+  let endScroll = 0;
+  let ticking = false;
+
+  function measure() {
+    logo.style.transform = "";
+    const scrollY = window.scrollY;
+    const logoRect = logo.getBoundingClientRect();
+    startScroll = scrollY + logoRect.top - stickTop;
+
+    const vision = section.querySelector(".vision-block");
+    const endAnchor = vision
+      ? vision.getBoundingClientRect().bottom + scrollY
+      : section.getBoundingClientRect().bottom + scrollY;
+
+    const extraStick = 140;
+    endScroll = endAnchor - stickTop + extraStick;
+  }
+
+  function update() {
+    ticking = false;
+    if (!desktopMq.matches) {
+      logo.style.transform = "";
+      return;
+    }
+
+    const y = window.scrollY;
+    if (endScroll <= startScroll || y <= startScroll) {
+      logo.style.transform = "";
+      return;
+    }
+
+    if (y >= endScroll) {
+      logo.style.transform = `translateY(${endScroll - startScroll}px)`;
+      return;
+    }
+
+    logo.style.transform = `translateY(${y - startScroll}px)`;
+  }
+
+  function requestUpdate() {
+    if (!ticking) {
+      ticking = true;
+      requestAnimationFrame(update);
+    }
+  }
+
+  measure();
+  update();
+  window.addEventListener("scroll", requestUpdate, { passive: true });
+  window.addEventListener("resize", () => {
+    measure();
+    requestUpdate();
+  });
+  desktopMq.addEventListener("change", () => {
+    measure();
+    requestUpdate();
+  });
+
+  const reveal = section.classList.contains("reveal-up") ? section : null;
+  if (reveal) {
+    const revealObserver = new MutationObserver(() => {
+      if (reveal.classList.contains("active")) {
+        measure();
+        requestUpdate();
+        revealObserver.disconnect();
+      }
+    });
+    revealObserver.observe(reveal, { attributes: true, attributeFilter: ["class"] });
+  }
+}
+
 function initPage() {
   initNav();
   initSegmentToggles();
@@ -194,6 +281,7 @@ function initPage() {
   initProductSlider();
   initScrollAnimations();
   handleDeepLink();
+  initAboutLogoSticky();
 }
 
 document.addEventListener("DOMContentLoaded", initPage);

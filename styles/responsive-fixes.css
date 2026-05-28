@@ -218,10 +218,21 @@
     gap: 20px !important; /* Reduced from 40px/60px */
   }
 
-  .home-page .why-choose {
+  .home-page .why-choose,
+  .home-page .faqs {
+    width: calc(100% - 20px) !important;
     max-width: calc(100% - 20px) !important;
+  }
+
+  .home-page .why-choose {
     padding: 28px 16px !important;
     border-radius: 24px !important;
+  }
+
+  .home-page .faqs {
+    padding: 28px 16px !important;
+    border-radius: 24px !important;
+    background: #ffffff !important;
   }
 
   .home-page .why-choose::before,
@@ -499,10 +510,21 @@
     height: auto !important;
   }
 
-  .home-page .why-choose {
+  .home-page .why-choose,
+  .home-page .faqs {
+    width: calc(100% - 16px) !important;
     max-width: calc(100% - 16px) !important;
+  }
+
+  .home-page .why-choose {
     padding: 24px 12px !important;
     border-radius: 20px !important;
+  }
+
+  .home-page .faqs {
+    padding: 24px 12px !important;
+    border-radius: 20px !important;
+    background: #ffffff !important;
   }
 
   .home-page .why-choose .container {
