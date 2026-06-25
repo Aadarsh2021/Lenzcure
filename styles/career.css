@@ -288,6 +288,38 @@
   .opening-card {
     min-width: 0;
   }
+
+  .narrative-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .narrative-content {
+    padding-bottom: 40px;
+    padding-left: 0;
+  }
+
+  .narrative-image img {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .openings-block {
+    margin-top: 60px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .openings-top {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .section-divider {
+    width: 100%;
+    margin-left: 0;
+    margin: 40px 0;
+  }
 }
 
 /* Footer Parity Reset: Career page global styles were overriding footer typography */

@@ -58,7 +58,7 @@
 
 .about-hero-copy {
   padding: 0 100px;
-  margin: 0 600px 0 0;
+  margin: 0 auto;
   max-width: 879px;
   margin-bottom: 70px;
 }
@@ -70,6 +70,7 @@
 @media (max-width: 1024px) {
   .about-hero-copy {
     padding: 0 32px;
+    margin: 0;
     text-align: center;
   }
 }
@@ -274,8 +275,8 @@
 }
 
 .cap-icon svg {
-  width: 70px;
-  height: 70px;
+  width: 32px;
+  height: 32px;
   display: block;
   object-fit: contain;
 }
@@ -691,6 +692,11 @@
 
   .founder-card {
     border-radius: 24px;
+  }
+
+  .about-content,
+  .narrative-block.vision-block {
+    margin-top: 0 !important;
   }
 }
 

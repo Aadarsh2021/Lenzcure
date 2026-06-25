@@ -16,17 +16,7 @@
     height: auto;
   }
 
-  /* Keep Hamburger Icon static (no cross transformation) */
-  .nav-toggle[aria-expanded="true"] span:nth-child(1) {
-    transform: none !important;
-  }
-  .nav-toggle[aria-expanded="true"] span:nth-child(2) {
-    opacity: 1 !important;
-    transform: none !important;
-  }
-  .nav-toggle[aria-expanded="true"] span:nth-child(3) {
-    transform: none !important;
-  }
+  /* Allow Hamburger Icon to animate */
 
   .container {
     width: min(1280px, calc(100% - 24px)) !important;
@@ -508,6 +498,16 @@
   .footer-brand .footer-logo img {
     width: 156px !important;
     height: auto !important;
+  }
+
+  .footer-links-wrap {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+    margin-top: 24px !important;
+  }
+
+  .footer-column .links a {
+    text-align: center !important;
   }
 
   .home-page .why-choose,
