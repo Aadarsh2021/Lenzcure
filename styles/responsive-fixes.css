@@ -174,12 +174,19 @@
 
   .home-page .faq-visual img,
   .home-page .global-map,
-  .about-page .global-map,
   .product-page .segment-col-image img {
     width: 100% !important;
     height: auto !important;
     aspect-ratio: 16 / 10;
     object-fit: cover !important;
+  }
+
+  .about-page .global-map {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 16 / 7 !important;
+    object-fit: cover !important;
+    border-radius: 16px !important;
   }
 
   .home-page .home-contact-form,
@@ -481,9 +488,12 @@
 
   .home-page .faq-visual img,
   .home-page .global-map,
-  .about-page .global-map,
   .product-page .segment-col-image img {
     aspect-ratio: 4 / 3 !important;
+  }
+
+  .about-page .global-map {
+    aspect-ratio: 16 / 6 !important;
   }
 
   .home-page .home-contact-form,
